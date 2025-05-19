@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Florian Koch" />
     <link rel="stylesheet" href="style.css" />
     <!-- Normalize.css -->
     <link
@@ -32,9 +33,12 @@
       padding: 0;
     }
     header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
       padding: 1rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     header ul {
       list-style: none;
@@ -44,6 +48,7 @@
       justify-content: center;
     }
     header li {
+      font-weight: bolder;
       margin: 0 1rem;
     }
     header a {
@@ -65,8 +70,10 @@
     main {
       display: flex;
       justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      align-items: flex-start;
+      gap: clamp(4vw, 6vw, 8vw);
+      padding-top: 2rem;
+      min-height: 90vh;
       background-color: #9c651d;
     }
     section {
@@ -75,9 +82,9 @@
       padding: 1rem;
       background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.05) 0%,
         rgba(30, 30, 30, 0.15) 60%,
-        rgba(0, 0, 0, 0.479) 100%
+        rgba(0, 0, 0, 0.2) 100%
         );
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,6 +95,10 @@
       font-weight: bolder;
       text-align: center;
       margin-bottom: 0.5rem;
+    }
+    h5 ::before {
+      content: "🔗";
+      margin-right: 0.5rem;
     }
     footer {
       padding: 1rem;
@@ -108,6 +119,10 @@
       margin: 0 auto 1rem auto;
       background-color: #eee;
     }
+    #cardText {
+      text-align: center;
+      padding: 1rem;
+    }
     #linkSection {
       display: flex;
       justify-content: center;
@@ -121,6 +136,8 @@
       flex-wrap: wrap;
       justify-content: center;
       flex-direction: column;
+      gap: 1rem;
+      min-width: 80%;
     }
     #linkSection li {
       margin: 0.5rem;
@@ -146,6 +163,9 @@
       text-decoration: none;
       color: #ffd57b;
     }
+    #seitenSkalierender {
+      min-width: clamp(300px, 70vw, 1000px);
+    }
   </style>
 
   <body>
@@ -154,23 +174,23 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="imprint.html">Impressum</a></li>
+          <li><a href="#">🡅</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
     <main>
-    <div class="wrapper">
+    <div id="seitenSkalierender" class="wrapper">
       <section id="card">
         <picture id="profilepicture">
           <source
           srcset="
-          https://1.gravatar.com/avatar/cb67ae8e8de3a2c380486e38b8492c1afdedbd855b44af63e1a4cb2c39bcea29?size=256&d=initials
-          "
+https://1.gravatar.com/avatar/cb67ae8e8de3a2c380486e38b8492c1afdedbd855b44af63e1a4cb2c39bcea29?size=256&d=initials"
           type="image/webp"
           />
           <source
-            srcset="
-            https://1.gravatar.com/avatar/cb67ae8e8de3a2c380486e38b8492c1afdedbd855b44af63e1a4cb2c39bcea29?size=256&d=initials
-            "
+            srcset="https://1.gravatar.com/avatar/cb67ae8e8de3a2c380486e38b8492c1afdedbd855b44af63e1a4cb2c39bcea29?size=256&d=initials"
             type="image/jpeg"
           />
           <img
@@ -181,30 +201,32 @@
           />
         </picture>
         <h1 id="name">Floko</h1>
-        <div>
+        <div id="cardText">
         <p id="title">Fachinformatiker</p>
+        <p id="subtitle">Anwendungs-systemintegrations-entwicklung</p>
         <p id="description">
           Anwendungs-systemintegrations-entwicklung 
         </p>
         </div>
       </section>
+
+<!---------------------------------------------------------------------->
+
+
       <section id="linkSection">
-        <ul>
+        <ul id="listOfLinks">
           <li>
             <article>
-              <span style="margin-right: 0.5em;">🔗</span>
               <h5><a href="https://www.example.com">Example</a></h5>
             </article>
           </li>
           <li>
             <article>
-              <span style="margin-right: 0.5em;">🔗</span>
               <h5><a href="https://www.google.com">Google</a></h5>
             </article>
           </li>
           <li>
             <article>
-              <span style="margin-right: 0.5em;">🔗</span>
               <h5><a href="https://www.github.com">GitHub</a></h5>
             </article>
           </li>
@@ -217,9 +239,9 @@
     <script>
       // Link Blob in der Reihenfolge wie sie mir eingefallen sind
       const links = [
-        { index: "1", name: "Example", url: "https://www.example.com" },
-        { index: "1", name: "Google", url: "https://www.google.com" },
-        { index: "1", name: "GitHub", url: "https://www.github.com" },
+        { index: "8", name: "Krrr", url: "https://www.example.com" },
+        { index: "4", name: "Gooasdasdgle", url: "https://www.google.com" },
+        { index: "2", name: "GitHub", url: "https://www.github.com" },
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
 
@@ -232,7 +254,7 @@
         for (let i = 0; i < n - 1; i++) {
           for (let j = 0; j < n - i - 1; j++) {
             if (arr[j].index > arr[j + 1].index) {
-              // Swap
+              // Swapinplace + temporäre Variable
               const temp = arr[j];
               arr[j] = arr[j + 1];
               arr[j + 1] = temp;
@@ -245,7 +267,7 @@
       //danach ausgabe auf die Seite mit document.write
 
       function appendLinks(sortedLinkArray) {
-        const listeInHTML_dokument = document.querySelector("ul");
+        const listeInHTML_dokument = document.querySelector("#listOfLinks");
 
         sortedLinkArray.forEach((linkElement) => {
 
@@ -265,6 +287,8 @@
           listeInHTML_dokument.appendChild(li);
         });
       }
+
+      appendLinks(bubbleSort(links));
     </script>
   </body>
 </html>
