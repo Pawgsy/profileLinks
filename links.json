@@ -1,0 +1,32 @@
+{
+  "content": [
+    {"index": 6,
+    "name": "GitHub",
+    "url": "https://github.com/Pawgsy"
+    },
+    {"index": 5,
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/adam-pawlak-0b1a4b1a3/"
+    },
+    {"index": 4,
+    "name": "Twitter",
+    "url": "https://twitter.com/PawlakAdam"
+    },
+    {"index": 3,
+    "name": "Instagram",
+    "url": "https://www.instagram.com/pawlakadam/"
+    },
+    {"index": 2,
+    "name": "Facebook",
+    "url": "https://www.facebook.com/pawlakadam"
+    },
+    {"index": 1,
+    "name": "YouTube",
+    "url": "https://www.youtube.com/@pawlakadam"
+    },
+    {"index": 0,
+    "name": "Twitch",
+    "url": "https://www.twitch.tv/pawlakadam"
+    }
+  ]
+}

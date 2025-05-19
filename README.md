@@ -1,10 +1,12 @@
-# profileLinks
+# Linkprofil
+
 a small Prototype of the Profile Link Page in Plain HTML, JS &amp; CSS
 as Project for the DAA HTML Course
 
 ## Draft German Umriss
 
-eine kleine Profilartige Seite
+eine kleine Profilartige Seite die Links zu einer bestimmten Person o.Ä enthält
+
 als Entwurf für eine Seite die ich schon immer erstellen wollte
 dann in ein Framework auseinanderpflücken kann um sie dynamisch zu befüllen
 
