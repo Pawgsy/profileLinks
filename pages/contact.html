@@ -112,6 +112,15 @@
       input[type="submit"]:hover {
         background-color: #e6c65a;
       }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 90vh;
+        padding: 2rem;
+        gap: clamp(4vw, 6vw, 8vw);
+      }
     </style>
   </head>
   <body>
@@ -131,19 +140,21 @@
         </ul>
       </nav>
     </header>
-    <h1>Kontakt</h1>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      <br /><br />
-      <label for="email">E-Mail:</label>
-      <input type="email" id="email" name="email" required />
-      <br /><br />
-      <label for="message">Nachricht:</label>
-      <textarea id="message" name="message" required></textarea>
-      <br /><br />
-      <input type="submit" value="Absenden" />
-    </form>
+    <main>
+      <h1>Kontakt</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br /><br />
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required />
+        <br /><br />
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br /><br />
+        <input type="submit" value="Absenden" />
+      </form>
+    </main>
     <footer>
       <p><a href="imprint.html">Impressum</a> | © 2025 Floko</p>
     </footer>
