@@ -4,12 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datenschutz</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        /* pasted from Notes */
+        font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+
+        background-color: #9c651d;
+        color: #ffd57b;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      header li {
+        font-weight: bolder;
+        margin: 0 1rem;
+      }
+      header a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+      nav {
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 2.1rem;
+        font-weight: bolder;
+        text-align: center;
+        margin: 2rem 0;
+      }
+      footer {
+        padding: 1rem;
+        text-align: center;
+      }
+      footer a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Startseite</a></li>
+          <li><a href="imprint.html">Impressum</a></li>
+          <li><a href="privacy.html">Datenschutz</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Datenschutz</h1>
     <p>
       Diese Seite ist ein privates Projekt und dient ausschließlich
       Informationszwecken.
     </p>
+    <footer>
+      <p></p>
+    </footer>
   </body>
 </html>

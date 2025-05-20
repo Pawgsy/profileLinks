@@ -22,51 +22,135 @@
         /* pasted from Notes */
         font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
           "Helvetica Neue", sans-serif;
-
         background-color: #9c651d;
         color: #ffd57b;
         margin: 0;
         padding: 0;
       }
+      header {
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.3) 100%
+        );
+        padding: 1rem;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      header li {
+        font-weight: bolder;
+        margin: 0 1rem;
+      }
+      header a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+      nav {
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 2.1rem;
+        font-weight: bolder;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      footer {
+        padding: 1rem;
+        text-align: center;
+      }
+      footer a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 1rem 0;
+      }
+      a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+      }
     </style>
     <title>Impressum</title>
   </head>
   <body>
-    <h1>Impressum</h1>
-    <p>
-      Diese Seite ist ein privates Projekt und dient ausschließlich
-      Informationszwecken.
-    </p>
-    <p>
-      Betreiber dieser Seite ist Florian Koch, wohnhaft in 12345 Musterstadt,
-      Musterstraße 1.
-    </p>
+    <header>
+      <ul>
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="privacy.html">Datenschutz</a></li>
+        <li><a href="imprint.html">Impressum</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </header>
+    <main>
+      <h1>Impressum</h1>
+      <p>
+        Diese Seite ist ein privates Projekt und dient ausschließlich
+        Informationszwecken.
+      </p>
+      <p>
+        Betreiber dieser Seite ist Florian Koch, wohnhaft in 12345 Musterstadt,
+        Musterstraße 1.
+      </p>
 
-    <p>
-      Diese Seite ist nicht kommerziell und verfolgt keine finanziellen
-      Interessen.
-    </p>
-    <p>
-      Für den Inhalt dieser Seite bin ich verantwortlich. Bei Fragen oder
-      Anregungen können Sie mich unter der E-Mail-Adresse
-      <a href="mailto:john.doe@example.com">john.doe@example.com</a> erreichen.
-    </p>
-    <p>
-      Diese Seite verwendet Cookies und speichert aber keine deanonymisierten
-      persönlichen Daten.
-    </p>
-    <p>
-      Die Inhalte dieser Seite sind urheberrechtlich geschützt. Eine
-      Vervielfältigung oder Verwendung der Inhalte ist ohne ausdrückliche
-      Zustimmung nicht gestattet.
-    </p>
-    <p>
-      Diese Seite enthält Links zu externen Webseiten. Für den Inhalt dieser
-      Seiten bin ich nicht verantwortlich.
-    </p>
-    <p>
-      Ich behalte mir das Recht vor, diese Seite jederzeit zu ändern oder zu
-      löschen.
-    </p>
+      <p>
+        Diese Seite ist nicht kommerziell und verfolgt keine finanziellen
+        Interessen.
+      </p>
+      <p>
+        Für den Inhalt dieser Seite bin ich verantwortlich. Bei Fragen oder
+        Anregungen können Sie mich unter der E-Mail-Adresse
+        <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+        erreichen.
+      </p>
+      <p>
+        Diese Seite verwendet Cookies und speichert aber keine deanonymisierten
+        persönlichen Daten.
+      </p>
+      <p>
+        Die Inhalte dieser Seite sind urheberrechtlich geschützt. Eine
+        Vervielfältigung oder Verwendung der Inhalte ist ohne ausdrückliche
+        Zustimmung nicht gestattet.
+      </p>
+      <p>
+        Diese Seite enthält Links zu externen Webseiten. Für den Inhalt dieser
+        Seiten bin ich nicht verantwortlich.
+      </p>
+      <p>
+        Ich behalte mir das Recht vor, diese Seite jederzeit zu ändern oder zu
+        löschen.
+      </p>
+    </main>
+    <footer>
+      <p><a href="imprint.html">Impressum</a> | © 2025 Floko</p>
+    </footer>
   </body>
 </html>
