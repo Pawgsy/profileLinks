@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Florian Koch" />
-    <link rel="stylesheet" href="style.css" />
     <!-- Normalize.css -->
     <link
       rel="stylesheet"
@@ -15,11 +14,28 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+    <!-- Own Styles last -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+
     <title>Links</title>
   </head>
 
   <style>
     * {
+      --primary-color: #483aa0;
+      --secondary-color: #7965c1;
+      --accent-color: #e3d095;
+      --background-color: #0e2148;
+
+      --primary-color-rgba: rgba(72, 58, 160, 0.8);
+      --secondary-color-rgba: rgba(121, 101, 193, 0.8);
+      --accent-color-rgba: rgba(227, 208, 149, 0.8);
+      --background-color-rgba: rgba(14, 33, 72, 0.8);
+    }
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
     html,
@@ -27,7 +43,7 @@
       /* pasted from Notes */
       font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
-      background-color: #9c651d;
+      background-color: var(--background-color);
       color: #ffd57b;
       margin: 0;
       padding: 0;
@@ -56,7 +72,7 @@
       margin: 0 1rem;
     }
     header a {
-      color: #ffd57b;
+      color: var(--accent-color);
       text-decoration: none;
     }
     nav {
@@ -81,7 +97,7 @@
       text-align: center;
     }
     footer a {
-      color: #ffd57b;
+      color: var(--accent-color);
       text-decoration: none;
     }
     main {
@@ -91,7 +107,7 @@
       gap: clamp(4vw, 6vw, 8vw);
       padding-top: 2rem;
       min-height: 90vh;
-      background-color: #9c651d;
+      background-color: var(--background-color);
     }
     section {
       max-width: 80vw;
@@ -99,19 +115,29 @@
       padding: 1rem;
       background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.05) 0%,
-        rgba(30, 30, 30, 0.15) 60%,
+        rgba(121, 101, 193, 0.05) 0%,
+        rgba(121, 101, 193, 0.15) 60%,
         rgba(0, 0, 0, 0.2) 100%
       );
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin-bottom: 1rem;
     }
+    #derDividirende {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    #derDividirende * {
+      display: inline-block;
+    }
+    /*
     h5 ::before {
       content: "🔗";
       margin-right: 0.5rem;
     }
-
+    */
     .profile-img {
       border: 4px solid #ffd57b;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -121,7 +147,7 @@
       object-fit: cover;
       display: block;
       margin: 0 auto 1rem auto;
-      background-color: #eee;
+      background-color: var(--accent-color);
     }
     #cardText {
       text-align: center;
@@ -146,26 +172,32 @@
     #linkSection li {
       margin: 0.5rem;
       padding: 0.5rem;
-      background-color: #9b6a00;
+      background-color: var(--primary-color);
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     #linkSection li:hover {
-      background-color: #9b6a00;
+      background-color: var(--secondary-color);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     #linkSection article {
       display: flex;
       align-items: center;
     }
+    #linkSection i {
+      font-size: 2rem;
+      margin-right: 1rem;
+      color: var(--accent-color);
+    }
     #linkSection h5 {
       margin: 0;
       font-size: 1.2rem;
-      color: #ffd57b;
     }
     #linkSection a {
       text-decoration: none;
-      color: #ffd57b;
+      color: var(--accent-color);
+      font-weight: bold;
+      transition: color 0.3s ease;
     }
     #seitenSkalierender {
       min-width: clamp(300px, 70vw, 1000px);
@@ -207,7 +239,10 @@
               loading="lazy"
             />
           </picture>
-          <h1 id="name">Floko</h1>
+          <div id="derDividirende">
+            <h1 id="name">Floko</h1>
+            <i id="verified-badge" class="fi fi-rr-badge-check"></i>
+          </div>
           <div id="cardText">
             <p id="title">Fachinformatiker</p>
             <h2 id="subtitle">Anwendungsentwicklung</h2>
@@ -221,18 +256,9 @@
           <ul id="listOfLinks">
             <template>
               <li>
+                <i class="fi fi-rr-globe"></i>
                 <article>
                   <h5><a href="https://www.example.com">Example</a></h5>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <h5><a href="https://www.google.com">Google</a></h5>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <h5><a href="https://www.github.com">GitHub</a></h5>
                 </article>
               </li>
             </template>
@@ -241,45 +267,91 @@
       </div>
     </main>
     <footer>
-      <p><a href="../pages/imprint.html">Impressum</a> | © 2025 Floko</p>
+      <p>
+        <a href="../pages/imprint.html">Impressum</a> | © 2025 Floko | Uicons
+        von <a href="https://www.flaticon.com/uicons">Flaticon</a>
+      </p>
     </footer>
     <script>
       // Link Blob in der Reihenfolge wie sie mir eingefallen sind
       const links = [
         {
-          index: "5",
+          index: 5,
+          icon_identifier: "fi fi-brands-facebook",
           name: "Facebook",
           url: "https://www.facebook.com/pawgsy",
         },
         {
-          index: "4",
+          index: 4,
+          icon_identifier: "fi fi-brands-instagram",
           name: "Instagram",
           url: "https://www.instagram.com/pawgsy",
         },
-        { index: "5", name: "Twitter / X", url: "https://x.com/pawgsy" },
-        { index: "8", name: "WhatsApp", url: "https://wa.me/+49" },
         {
-          index: "2",
+          index: 5,
+          icon_identifier: "fi fi-brands-twitter-alt",
+          name: "Twitter / X",
+          url: "https://x.com/pawgsy",
+        },
+        {
+          index: 8,
+          icon_identifier: "fi fi-brands-whatsapp",
+          name: "WhatsApp",
+          url: "https://wa.me/+49",
+        },
+        {
+          index: 2,
+          icon_identifier: "fi fi-brands-discord",
           name: "Discord",
           url: "https://discordapp.com/users/233314326281322497",
         },
         {
-          index: "3",
+          index: 3,
+          icon_identifier: "fi fi-brands-spotify",
           name: "Spotify",
           url: "https://open.spotify.com/user/pawgsy",
         },
-        { index: "1", name: "Website", url: "https://floko.cc" },
-        { index: "8", name: "Telegram", url: "https://t.me/pawgsy" },
-        { index: "2", name: "GitHub", url: "https://www.github.com/Pawgsy" },
         {
-          index: "9",
+          index: 1,
+          icon_identifier: "fi fi-rr-globe",
+          name: "Homepage",
+          url: "https://floko.cc",
+        },
+        {
+          index: 8,
+          icon_identifier: "fi fi-brands-telegram",
+          name: "Telegram",
+          url: "https://t.me/pawgsy",
+        },
+        {
+          index: 2,
+          icon_identifier: "fi fi-brands-github",
+          name: "GitHub",
+          url: "https://www.github.com/Pawgsy",
+        },
+        {
+          index: 9,
+          icon_identifier: "fi fi-brands-reddit",
           name: "Reddit",
           url: "https://www.reddit.com/user/Pawgsy",
         },
         {
-          index: "7",
+          index: 7,
+          icon_identifier: "fi fi-brands-linkedin",
           name: "Linkedin",
           url: "https://www.linkedin.com/in/pawgsy",
+        },
+        {
+          index: 10,
+          icon_identifier: "fi fi-rr-gym",
+          name: "Hevy",
+          url: "https://hevy.com/user/pawgsy",
+        },
+        {
+          index: 11,
+          icon_identifier: "fi fi-brands-google",
+          name: "Google",
+          url: "https://g.dev/pawgsy",
         },
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
@@ -287,7 +359,7 @@
       //var links = () =>{json.parse(localStorage.getItem('links')) || []};
 
       //Bubblesort für das "Array"
-
+      //Ai generated
       function bubbleSort(arr) {
         const n = arr.length;
         for (let i = 0; i < n - 1; i++) {
@@ -310,14 +382,18 @@
 
         sortedLinkArray.forEach((linkElement) => {
           const li = document.createElement("li");
+          const i = document.createElement("i");
           const article = document.createElement("article");
           const h5 = document.createElement("h5");
           const a = document.createElement("a");
 
+          i.className = linkElement.icon_identifier;
+
           a.href = linkElement.url;
           a.textContent = linkElement.name;
 
-          // li < article < h5 < a
+          // li < article < i & h5 < a
+          article.appendChild(i);
           article.appendChild(h5);
           h5.appendChild(a);
           // li < article
