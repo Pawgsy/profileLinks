@@ -2,7 +2,10 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <meta name="author" content="Florian Koch" />
     <!-- Normalize.css -->
     <link
@@ -17,6 +20,10 @@
     <!-- Own Styles last -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/icons.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
 
     <title>Social Media Accounts of Floko</title>
 
@@ -54,8 +61,8 @@
     html,
     body {
       /* pasted from Notes */
-      font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-        "Helvetica Neue", sans-serif;
+      font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
       background-color: var(--background-color);
       color: #ffd57b;
       margin: 0;
@@ -312,7 +319,10 @@
           </picture>
           <div id="derDividirende">
             <h1 id="name">Floko</h1>
-            <i id="verified-badge" class="fi fi-rr-badge-check"></i>
+            <i
+              id="verified-badge"
+              class="fi fi-rr-badge-check"
+            ></i>
           </div>
           <div id="cardText">
             <p id="title">Fachinformatiker</p>
@@ -339,7 +349,9 @@
               <li>
                 <i class="fi fi-rr-globe"></i>
                 <article>
-                  <h5><a href="https://www.example.com">Example</a></h5>
+                  <h5>
+                    <a href="https://www.example.com">Example</a>
+                  </h5>
                 </article>
               </li>
             </template>
@@ -349,8 +361,9 @@
     </main>
     <footer>
       <p>
-        <a href="../pages/imprint.html">Impressum</a> | © 2025 Floko | Uicons
-        von <a href="https://www.flaticon.com/uicons">Flaticon</a>
+        <a href="../pages/imprint.html">Impressum</a> | © 2025
+        Floko | Uicons von
+        <a href="https://www.flaticon.com/uicons">Flaticon</a>
       </p>
     </footer>
     <script>
@@ -519,7 +532,8 @@
       //danach ausgabe auf die Seite mit document.write
 
       function appendLinks(sortedLinkArray) {
-        const listeInHTML_dokument = document.querySelector("#listOfLinks");
+        const listeInHTML_dokument =
+          document.querySelector("#listOfLinks");
 
         sortedLinkArray.forEach((linkElement) => {
           const li = document.createElement("li");

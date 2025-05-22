@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Kontakt</title>
     <link rel="stylesheet" href="../style.css" />
     <link
@@ -15,16 +18,29 @@
     />
     <style>
       * {
+        --primary-color: #483aa0;
+        --secondary-color: #7965c1;
+        --accent-color: #e3d095;
+        --background-color: #0e2148;
+
+        --primary-color-rgba: rgba(72, 58, 160, 0.8);
+        --secondary-color-rgba: rgba(121, 101, 193, 0.8);
+        --accent-color-rgba: rgba(227, 208, 149, 0.8);
+        --background-color-rgba: rgba(14, 33, 72, 0.8);
+      }
+      *,
+      *::before,
+      *::after {
         box-sizing: border-box;
       }
       html,
       body {
         /* pasted from Notes */
-        font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-          "Helvetica Neue", sans-serif;
+        font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell,
+          "Open Sans", "Helvetica Neue", sans-serif;
 
-        background-color: #9c651d;
-        color: #ffd57b;
+        background-color: var(--background-color);
+        color: var(--accent-color);
         margin: 0;
         padding: 0;
       }
@@ -82,10 +98,10 @@
       }
 
       form {
-        max-width: 600px;
+        width: clamp(70vw, 80vw, 90vw);
         margin: auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: var(--primary-color);
         border-radius: 8px;
       }
       label {
@@ -102,7 +118,7 @@
         border: 1px solid #ccc;
       }
       input[type="submit"] {
-        background-color: #ffd57b;
+        background-color: var(--secondary-color);
         color: #000;
         padding: 10px 20px;
         border: none;
@@ -110,7 +126,7 @@
         cursor: pointer;
       }
       input[type="submit"]:hover {
-        background-color: #e6c65a;
+        background-color: var(--accent-color);
       }
       main {
         display: flex;
@@ -130,7 +146,8 @@
           <li><a href="../index.html">Startseite</a></li>
           <li><a href="imprint.html">Impressum</a></li>
           <li>
-            <a href="https://github.com/Pawgsy/profileLinks/blob/main/README.md"
+            <a
+              href="https://github.com/Pawgsy/profileLinks/blob/main/README.md"
               >Dokumentation</a
             >
           </li>
@@ -140,21 +157,47 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Kontakt</h1>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <br /><br />
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required />
-        <br /><br />
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" required></textarea>
-        <br /><br />
-        <input type="submit" value="Absenden" />
-      </form>
-    </main>
+    <div class="wrapper">
+      <main>
+        <h1>Kontakt</h1>
+        <form action="https://pawgsy.de/endpoint" method="POST">
+          <label for="subject">Betreff:</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+          />
+          <br /><br />
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="name"
+          />
+          <br /><br />
+          <label for="email">E-Mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            required
+          />
+          <br /><br />
+          <label for="message">Nachricht:</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+          ></textarea>
+          <br /><br />
+          <input type="submit" value="Absenden" />
+        </form>
+      </main>
+    </div>
     <footer>
       <p><a href="imprint.html">Impressum</a> | © 2025 Floko</p>
     </footer>
