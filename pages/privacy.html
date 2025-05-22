@@ -22,7 +22,6 @@
         /* pasted from Notes */
         font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
           "Helvetica Neue", sans-serif;
-
         background-color: #9c651d;
         color: #ffd57b;
         margin: 0;
@@ -70,7 +69,7 @@
         font-size: 2.1rem;
         font-weight: bolder;
         text-align: center;
-        margin: 2rem 0;
+        margin-bottom: 0.5rem;
       }
       footer {
         padding: 1rem;
@@ -80,13 +79,24 @@
         color: #ffd57b;
         text-decoration: none;
       }
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 1rem 0;
+      }
+      a {
+        color: #ffd57b;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
       main {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
         padding: 2rem;
-        gap: clamp(4vw, 6vw, 8vw);
       }
     </style>
   </head>
@@ -112,9 +122,40 @@
         Diese Seite ist ein privates Projekt und dient ausschließlich
         Informationszwecken.
       </p>
+      <p>
+        Diese Webseite nutzt externe Quellen zur Funktion und Darstellung. Beim
+        Aufruf einer Seite lädt Ihr Browser die benötigten Dateien in ihren
+        Browser-Cache, um Inhalt korrekt anzuzeigen.
+      </p>
+      <p>
+        Hierbei wird eine Verbindung zu externen Servern von Drittanbietern die
+        im Folgenden kompakt aufgelistet werden hergestellt. Hierdurch erlangen
+        diese Drittanbieter Kenntnis darüber, dass über Ihre IP-Adresse unsere
+        Webseite aufgerufen wurde.
+      </p>
+      <p>
+        Die Nutzung erfolgt im Interesse einer einheitlichen und ansprechenden
+        Darstellung sowie sicherer, schneller und fehlerfreie Funktion unserer
+        Online-Angebote.
+        <br />
+        Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f
+        DSGVO dar.
+      </p>
+      <p>
+        Weitere Informationen zu besagten Drittanbietern finden Sie unter
+        folgenden Links zu deren individuellen Datenschutzerklärungen und in den
+        jeweiligen Datenschutzerklärung der Drittanbieter welche entweder als
+        sekundärer Link oder am Ende der Quellen zum jeweiligen Anbieter, als
+        Abschluss und Sicherheit, dass keine weitere Erwähnung stattfindet.
+      </p>
+      <template>
+        <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
+          >Bootstrap Lizenz</a
+        >
+      </template>
     </main>
     <footer>
-      <p></p>
+      <p><a href="imprint.html">Impressum</a> | © 2025 Floko</p>
     </footer>
   </body>
 </html>
