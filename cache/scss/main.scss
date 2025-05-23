@@ -1,0 +1,61 @@
+/*
+  Main SCSS file for the profileLinks project.
+  This file controls the compilation process, output directory, and other settings.
+*/
+
+// Import necessary modules and partials
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/links';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/home';
+
+// Global styles
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-background;
+}
+
+// Example of using a mixin
+.container {
+  @include center-content;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+// Example of using a variable
+h1 {
+  color: $color-primary;
+}
+
+// Media queries example
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+// Output directory and compilation settings are typically configured in a build tool
+// like Gulp, Webpack, or a dedicated Sass compiler.
+// This file primarily defines the styles and imports.
+
+// Example of a simple style rule
+.profile-link {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $color-text;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+}

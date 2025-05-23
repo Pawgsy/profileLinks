@@ -510,8 +510,6 @@
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
 
-      //var links = () =>{json.parse(localStorage.getItem('links')) || []};
-
       //Bubblesort für das "Array"
       //Ai generated
       function bubbleSort(arr) {
@@ -558,6 +556,22 @@
       }
 
       appendLinks(bubbleSort(links));
+
+      //Ai generated
+      // Fetch the JSON data
+
+      fetch("links.json")
+        .then((response) => response.json())
+        .then((data) => {
+          links = json.parse(data);
+          // Sort the links by index
+          const sortedLinks = bubbleSort(data);
+          // Append the sorted links to the HTML
+          appendLinks(sortedLinks);
+        })
+        .catch((error) =>
+          console.error("Error fetching links:", error)
+        );
     </script>
   </body>
 </html>
