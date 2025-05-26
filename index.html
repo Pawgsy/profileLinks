@@ -46,6 +46,7 @@
       --primary-color: #483aa0;
       --secondary-color: #7965c1;
       --accent-color: #e3d095;
+      --secondary-accent-color: #ffd57b;
       --background-color: #0e2148;
 
       --primary-color-rgba: rgba(72, 58, 160, 0.8);
@@ -64,7 +65,7 @@
       font-family: system-ui, Roboto, Oxygen, Ubuntu, Cantarell,
         "Open Sans", "Helvetica Neue", sans-serif;
       background-color: var(--background-color);
-      color: #ffd57b;
+      color: var(--accent-color);
       margin: 0;
       padding: 0;
       overflow-x: hidden;
@@ -129,9 +130,10 @@
       text-align: center;
       min-height: 20vh;
     }
-    footer a {
+    a {
       color: var(--accent-color);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     main {
       display: flex;
@@ -155,6 +157,10 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin-bottom: 1rem;
+    }
+    iframe {
+      border-radius: 8px;
+      display: block;
     }
     #derDividirende {
       display: flex;
@@ -227,10 +233,7 @@
       font-size: 1.2rem;
     }
     #linkSection a {
-      text-decoration: none;
-      color: var(--accent-color);
       font-weight: bold;
-      transition: color 0.3s ease;
     }
     #seitenSkalierender {
       min-width: clamp(300px, 70vw, 1000px);
@@ -271,13 +274,27 @@
       transition: background-color 0.3s ease;
       transform: scale(1.05);
     }
+    #spotify-on-repeat-playlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+    }
     #lebenslauf {
-      overflow: hidden;
+      overflow-x: scroll;
+      overflow-y: hidden;
     }
     #lebenslauf iframe {
       width: 100ch;
       height: 100ch;
       overflow: hidden;
+    }
+    #lebenslaufControls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
     }
   </style>
 
@@ -366,11 +383,12 @@
           </ul>
         </section>
         <section id="spotify-on-repeat-playlist">
+          <h3>Spotify on-Repeat</h3>
           <iframe
-            style="border-radius: 12px"
+            style="border-radius: 8px"
             src="https://open.spotify.com/embed/playlist/37i9dQZF1EpjP8MCFaVbyG?utm_source=generator"
             width="100%"
-            height="352"
+            height="100%"
             frameborder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -378,16 +396,31 @@
           ></iframe>
         </section>
         <section id="lebenslauf">
+          <h3>Lebenslauf</h3>
           <iframe
+            style="border-radius: 8px"
             src="https://docs.google.com/document/d/e/2PACX-1vTsBXQb70-Lfl2lHogc95OJviz4q836JZbCkC4tqExIY9OB0HXiCEG-a3wU7peRgfYgUXa1Ln1m0dXK/pub?embedded=true"
             scrolling="no"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen=""
+            loading="lazy"
           ></iframe>
-          <input
-            type="button"
-            title="lebenslaufPDFdownload"
-            value="PDF herunterladen"
-            onclick
-          />
+          <div id="lebenslaufControls">
+            <a
+              href="./pages/lebenslauf.html"
+              rel="noopener noreferrer"
+            >
+              Direktlink
+            </a>
+            <input
+              type="button"
+              title="lebenslaufPDFdownload"
+              value="PDF herunterladen"
+              onclick
+            />
+          </div>
         </section>
       </div>
     </main>
