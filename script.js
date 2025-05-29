@@ -144,6 +144,12 @@
           name: "Profil",
           url: "https://www.ebay.de/usr/pawgsy",
         },
+        {
+           index: 23,
+           icon_identifier: "fi fi-brands-amazon",
+           name: "Profil",
+           url: "https://www.amazon.com/gp/profile/amzn1.account.AEB365I2MFOY3PBLJ5SCEGAAK67A#edit-image-secondary-view-profile_1748543925830",
+        },
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
 
@@ -251,16 +257,37 @@
         {
           index: 1,
           icon_identifier: "fi fi-brands-amazon",
-          name: "Floko's Amazon Shop",
-          url: "https://www.amazon.de/shop/floko",
+          name: "Amazon Wishlist",
+          url: "https://www.amazon.de/hz/wishlist/ls/2FNSBC11LH2W7?ref_=wl_share",
         },
         {
           index: 2,
           icon_identifier: "fi fi-brands-amazon",
-          name: "Amazon",
+          name: "Huel",
+          url: "https://www.amazon.de/shop/floko",
+        },
+        {
+          index: 3,
+          icon_identifier: "fi fi-brands-amazon",
+          name: "Holy",
+          url: "https://www.amazon.de/shop/floko",
+        },
+        {
+          index: 4,
+          icon_identifier: "fi fi-brands-amazon",
+          name: "Y-Food",
+          url: "https://www.amazon.de/shop/floko",
+        },
+        {
+          index: 5,
+          icon_identifier: "fi fi-brands-amazon",
+          name: "ESN",
           url: "https://www.amazon.de/shop/floko",
         },
       ];
+      
+      
+      
       appendLinks(bubbleSort(links));
 
       appendLinks2UnorderedListAdvanced(
