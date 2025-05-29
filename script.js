@@ -150,6 +150,12 @@
            name: "Profil",
            url: "https://www.amazon.com/gp/profile/amzn1.account.AEB365I2MFOY3PBLJ5SCEGAAK67A#edit-image-secondary-view-profile_1748543925830",
         },
+        {
+           index: 24,
+           icon_identifier: "",
+           name: "Google Maps",
+           url: "https://maps.app.goo.gl/Awv71mqvxg7mmACw9?g_st=iw",
+        },
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
 
