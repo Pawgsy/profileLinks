@@ -152,7 +152,7 @@
         },
         {
            index: 24,
-           icon_identifier: "",
+           icon_identifier: "fi fi-brands-google-maps",
            name: "Google Maps",
            url: "https://maps.app.goo.gl/Awv71mqvxg7mmACw9?g_st=iw",
         },
