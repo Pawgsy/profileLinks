@@ -156,6 +156,18 @@
            name: "Google Maps",
            url: "https://maps.app.goo.gl/Awv71mqvxg7mmACw9?g_st=iw",
         },
+        {
+          index: 99,
+          icon_identifier: "fi fi-brands-bitly",
+          name: "Bitly Page",
+          url: "https://bit.ly/m/hesoyam",
+        },
+        {
+          index: 25,
+          icon_identifier: "fi fi-brands-",
+          name: "tsetste",
+          url: "https://www.tsetste.com/pawgsy",
+        },
       ];
       //dann der index nachträglich, damit ich die Elemente ordnen kann
 
@@ -276,19 +288,31 @@
           index: 3,
           icon_identifier: "fi fi-brands-amazon",
           name: "Holy",
-          url: "https://www.amazon.de/shop/floko",
+          url: "https://de.weareholy.com/?ll_ref_id=ZZOnA3Bh5",
         },
         {
           index: 4,
           icon_identifier: "fi fi-brands-amazon",
           name: "Y-Food",
-          url: "https://www.amazon.de/shop/floko",
+          url: "https://www.talkable.com/x/XSNdpZ",
         },
         {
           index: 5,
           icon_identifier: "fi fi-brands-amazon",
           name: "ESN",
           url: "https://www.amazon.de/shop/floko",
+        },
+        {
+          index: 6,
+          icon_identifier: "fi fi-brands-dropbox",
+          name: "Dropbox Referral",
+          url: "https://www.dropbox.com/referrals/AADUr1DBH5jMxh9EtUaf4ojgoNejE3tcg1c?src=global9",
+        },
+        {
+          index: 7,
+          icon_identifier: "fi fi-brands-dropbox",
+          name: "Capcut Referral",
+          url: "https://www.capcut.com/capcut_pc_web/fission_receive?code=pKLTB609918049&lng=en",
         },
       ];
       
