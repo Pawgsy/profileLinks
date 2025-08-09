@@ -313,10 +313,14 @@
           icon_identifier: "fi fi-brands-dropbox",
           name: "Capcut Referral",
           url: "https://www.capcut.com/capcut_pc_web/fission_receive?code=pKLTB609918049&lng=en",
+        },      
+        {
+          index: 8,
+          icon_identifier: "fi fi-brands-nitrado",
+          name: "Nitrado Donate",
+          url: "https://server.nitrado.net/donations/donate/437341",
         },
       ];
-      
-      
       
       appendLinks(bubbleSort(links));
 
