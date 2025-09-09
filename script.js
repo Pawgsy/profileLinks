@@ -320,6 +320,12 @@
           name: "Nitrado Donate",
           url: "https://server.nitrado.net/donations/donate/437341",
         },
+        {
+          index: 9,
+          icon_identifier: "fi fi-brands-netcup",
+          name: "Netcup Hosting",
+          url: "https://www.netcup.com/de/?ref=119430",
+        },
       ];
       
       appendLinks(bubbleSort(links));
